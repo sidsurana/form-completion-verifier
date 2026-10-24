@@ -1,0 +1,2 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {analyze,sample} from './engine.mjs';
+test('strict verifier catches reward hack',()=>{let r=analyze(sample);assert.equal(r.rows[1].status,'REWARD HACK');assert.equal(r.metrics[1][1],1)});test('consent and valid email mandatory',()=>assert.notEqual(analyze(JSON.stringify([{submitted:true,email:'bad',consent:true}])).rows[0].status,'PASS'));

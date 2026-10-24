@@ -1,0 +1,10 @@
+{
+  "name": "form-completion-verifier",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests.mjs"
+  },
+  "description": "Compare weak and strict checks on synthetic form-completion proposals.",
+  "license": "MIT"
+}
